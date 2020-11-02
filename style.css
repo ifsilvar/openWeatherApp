@@ -1,3 +1,10 @@
-.header{
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.header {
     background-color: dodgerblue;
+    font-weight: 900;
+    font-style: italic;
 }
