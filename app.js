@@ -1,22 +1,8 @@
-// var settings = {
-//     "async": true,
-//     "crossDomain": true,
-//     "url": "https://community-open-weather-map.p.rapidapi.com/weather?q=London%252Cuk",
-//     "method": "GET",
-//     "headers": {
-//       "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-//       "x-rapidapi-key": "[6323c384c35aed8b3ec1d85758067130]"
-//     }
-//   }
-//   $.ajax(settings).done(function (response) {
-//     console.log(response);
-//   });
-
 $(document).ready(function(){
         //query url
         var key = "6323c384c35aed8b3ec1d85758067130"
         let queryURL =
-          "https://api.openweathermap.org/data/2.5/weather?q=London&units=imperial&appid=6323c384c35aed8b3ec1d85758067130";
+          "https://api.openweathermap.org/data/2.5/weather?q=irvine&units=imperial&appid=6323c384c35aed8b3ec1d85758067130";
         //ajax call
         $.ajax({
           url: queryURL,
@@ -31,25 +17,11 @@ $(document).ready(function(){
 
 function writeInfo(response){
     //var actualName = $("<h1>").text(main.temp);
-    return "<h2>Weather: " + response.weather[0].main + "</h2>" +
-        "<h2>Description: " + response.weather[0].description + "</h2>" +
-        "<h2>Temp: " + response.main.temp + "</h2>"
+    return "<h1>Location: " + response.name + ", " + response.sys.country + "</h1>" + 
+        "<p><strong>Weather: " + response.weather[0].main + "</strong></p>" + 
+        "<p><strong>Wind: " + response.wind.speed + "</strong></p>" +
+        "<p><strong>Description: " + response.weather[0].description + "</strong></p>" +
+        "<p><strong>Temp: " + response.main.temp + "</strong></p>"
     //$('#main').append(actualName)
 }
 writeInfo();
-
-// function getWeather() {
-//     //query url
-//     var key = "6323c384c35aed8b3ec1d85758067130"
-//     let queryURL =
-//       "api.openweathermap.org/data/2.5/weather?q=London&appid={6323c384c35aed8b3ec1d85758067130}";
-//     //ajax call
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET",
-//     }).then(function (response) {
-//       console.log(queryURL);
-//       console.log(response);
-//       //save the search results and create search buttons
-//     });
-//   }
