@@ -12,3 +12,11 @@
 #weatherDash{
     font-size: 40px;
 }
+
+#icon{
+    display: block;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    width: 10%;
+    height: auto;
+}

@@ -22,7 +22,8 @@ $(document).ready(function(){
 });
 
 function writeInfo(response){
-    return "<h2>Location: " + response.name + ", " + response.sys.country + "</h2>" + 
+    return "<img id='icon' src='http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png'>" +
+        "<p>Location: " + response.name + ", " + response.sys.country + "</p>" + 
         "<p><strong>Temp: " + response.main.temp + "</strong></p>" + 
         "<p><strong>High: " + response.main.temp_max + "</strong></p>" + 
         "<p><strong>Low: " + response.main.temp_min + "</strong></p>" + 
