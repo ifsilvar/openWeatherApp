@@ -32,4 +32,3 @@ function writeInfo(response){
         "<p><strong>Description: " + response.weather[0].description + "</strong></p>"
         
 }
-writeInfo();
