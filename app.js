@@ -22,12 +22,13 @@ $(document).ready(function(){
 });
 
 function writeInfo(response){
-    //var actualName = $("<h1>").text(main.temp);
-    return "<h1>Location: " + response.name + ", " + response.sys.country + "</h1>" + 
-        "<p><strong>Weather: " + response.weather[0].main + "</strong></p>" + 
+    return "<h2>Location: " + response.name + ", " + response.sys.country + "</h2>" + 
+        "<p><strong>Temp: " + response.main.temp + "</strong></p>" + 
+        "<p><strong>High: " + response.main.temp_max + "</strong></p>" + 
+        "<p><strong>Low: " + response.main.temp_min + "</strong></p>" + 
+        "<p><strong>Weather: " + response.weather[0].main + "</strong></p>"+
         "<p><strong>Wind: " + response.wind.speed + "</strong></p>" +
-        "<p><strong>Description: " + response.weather[0].description + "</strong></p>" +
-        "<p><strong>Temp: " + response.main.temp + "</strong></p>"
-    //$('#main').append(actualName)
+        "<p><strong>Description: " + response.weather[0].description + "</strong></p>"
+        
 }
 writeInfo();
