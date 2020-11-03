@@ -3,10 +3,11 @@
     font-weight: 600;
 }
 
-.header {
+header {
     background-color: dodgerblue;
     font-weight: 900;
     font-style: italic;
+    padding-left: 10px;
 }
 
 #weatherDash{

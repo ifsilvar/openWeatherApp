@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 function writeInfo(response){
     return "<img id='icon' src='http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png'>" +
-        "<p id='cityWeather'>" + response.name + ", " + response.sys.country + "</p>" + 
+        "<p id='cityWeather'>" + response.name + ", " + response.sys.country + "</p>" +
         "<p id='currentTemp'><strong>" + response.main.temp + " F" + "</strong></p>" + 
         "<p><strong>H:" + response.main.temp_max + "° " + "L:" + response.main.temp_min + "°" + "</strong></p>" + 
         "<p><strong>" + response.weather[0].main + "</strong></p>"+
