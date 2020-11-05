@@ -46,9 +46,9 @@ function writeInfo(response){
 
     var cityTitle = $(`<h5>`).addClass("card-title text-white").text(response.name + ", " + response.sys.country).css("margin", "0px");
     var weatherTitle = $(`<p>`).addClass("card-text text-white").text(response.weather[0].main).css("margin", "0px");
-    var currentTemp = $(`<h1>`).addClass("card-text text-white").text(response.main.temp + "° F").css("margin", "0px");
-    var weatherHL = $(`<p>`).addClass("card-text text-white").text("H:" + response.main.temp_max + "° " + "L:" + response.main.temp_min + "°").css("margin", "0px");
-    var wind = $(`<p>`).addClass("card-text text-white").text("Wind: " + response.wind.speed + " MPH").css("margin", "0px")
+    var currentTemp = $(`<h1>`).addClass("card-text text-white").text(Math.floor(response.main.temp) + "° F").css("margin", "0px");
+    var weatherHL = $(`<p>`).addClass("card-text text-white").text("H:" + Math.floor(response.main.temp_max) + "° " + "L:" + Math.floor(response.main.temp_min) + "°").css("margin", "0px");
+    var wind = $(`<p>`).addClass("card-text text-white").text("Wind: " + Math.floor(response.wind.speed) + " MPH").css("margin", "0px")
     var description = $(`<p>`).addClass("card-text text-white").text("Description: " + response.weather[0].description).css("margin", "0px")
     $("#cardBody").append(cityTitle, weatherTitle, currentTemp, weatherHL, wind, description);
     var weatherImg = $(`<img>`).addClass("card-img").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png").attr("alt", "weather icon");
