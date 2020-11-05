@@ -20,11 +20,15 @@ header {
 }
 
 #weatherDash{
-    font-size: 40px;
+    font-size: 30px;
+    margin: 0px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 #icon{
     display: block;
+    margin: 0px;
     /*margin-left: auto;
     margin-right: auto;*/
     /* width: 10%;
