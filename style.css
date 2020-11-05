@@ -41,6 +41,11 @@ header {
     padding-left: 0px;
 }
 
+#location{
+    border-radius: 30px;
+    padding-left: 10px;
+}
+
 #weather{
     /* background-color: #fff; */
     background-color: rgba(22, 22, 22, 0.5);
