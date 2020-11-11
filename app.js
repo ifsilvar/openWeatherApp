@@ -51,7 +51,7 @@ function writeInfo(response){
     var wind = $(`<p>`).addClass("card-text text-white").text("Wind: " + Math.floor(response.wind.speed) + " MPH").css("margin", "0px")
     var description = $(`<p>`).addClass("card-text text-white").text("Description: " + response.weather[0].description).css("margin", "0px")
     $("#cardBody").append(cityTitle, weatherTitle, currentTemp, weatherHL, wind, description);
-    var weatherImg = $(`<img>`).addClass(`card-img img-fluid`).attr(`src`, `./icons/${response.weather[0].icon}.png`).attr("alt", "Responsive image").css('width', '75%');
+    var weatherImg = $(`<img>`).addClass(`card-img img-fluid`).attr(`src`, `icons/${response.weather[0].icon}.png`).attr("alt", "Responsive image").css('width', '75%');
     // $("#weather").append(newRow, colBody);
     $("#imgHere").append(weatherImg);
     // return "<img id='icon' src='http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png'>" +
